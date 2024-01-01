@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Booking Test Suite" thread-count="2" verbose="3">
+	
+	<listeners>
+		<listener class-name = "com.booking.reporting.SetUp" />
+	</listeners>
+	
+	<test name="Booking Test">
+		<classes>
+			<class name="com.booking.Test.BookingTest" />
+				<methods>
+					<include name = "createBookingAndVerifyResponse" />
+				</methods>
+		</classes>
+	</test>
+</suite>
