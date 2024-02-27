@@ -60,7 +60,7 @@ public class BookingTest extends BookingAPI {
 //			e.printStackTrace();
 //		}		
 //		Booking book = Booking.builder().firstName("Samarth").build();			// To enable Pojo to accept default value we have make toBuilder = true
-		Booking book = new Booking().toBuilder().firstname("Samarth").build();
+		Booking book = new Booking().builder().firstname("Samarth").build();
 		//Booking book = new Booking().getAddDet(AdditionalDetails.Lunch).build();
 		
 		Response resposne = createBooking(book);
@@ -71,7 +71,7 @@ public class BookingTest extends BookingAPI {
 	@Test(enabled=true)
 	public void createBookingAndVerifyResponse() throws JsonMappingException, JsonProcessingException
 	{
-		Booking payload = new Booking().toBuilder().build();
+		Booking payload = new Booking().builder().build();
 		
 		Response resposne = createBooking(payload);
 		

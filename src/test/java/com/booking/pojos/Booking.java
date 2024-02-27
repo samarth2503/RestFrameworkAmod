@@ -19,7 +19,7 @@ import lombok.Setter;
 @EqualsAndHashCode
 @Setter
 @Getter
-@Builder(toBuilder = true)
+@Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Booking {
 	
@@ -27,7 +27,8 @@ public class Booking {
 	private String lastname = RandomDataGenerator.getRandomLasttName();
 	private int totalprice = RandomDataGenerator.getRandomNumberBetween(1000, 5000);
 	private boolean depositpaid = RandomDataGenerator.getBooleanValue();
-	private BookingDates bookingdates = new BookingDates(RandomDataGenerator.getCurrentDate(),RandomDataGenerator.getCurrentDate());
+	private BookingDates bookingdates = new BookingDates();
 	private String additionalneeds = RandomDataGenerator.getAdditionalDetails();
+
 
 }

@@ -41,7 +41,7 @@ public class Payload {
 		.lastname(RandomDataGenerator.getRandomDatafor(RandomDataTypeNames.LASTNAME))
 		.totalprice(RandomDataGenerator.getRandomNumberBetween(1000, 5000))
 		.depositpaid(RandomDataGenerator.getBooleanValue())
-		.bookingdates(new BookingDates(RandomDataGenerator.getCurrentDate(),RandomDataGenerator.getFutureDate()))
+		.bookingdates(new BookingDates())
 		.additionalneeds(RandomDataGenerator.getAdditionalDetails())
 		.build();
 	}

@@ -41,7 +41,7 @@ public class BookingTestNew extends BookingAPI {
 			.lastname(data.get("LastName"))
 			.totalprice(Integer.parseInt(data.get("TotalPrice")))
 			.depositpaid(Boolean.parseBoolean(data.get("Paid")))
-			.bookingdates(new BookingDates(data.get("checkin"),data.get("checkout")))
+			.bookingdates(new BookingDates())
 			.additionalneeds(data.get("AdditionalDetails"))
 			.build();
 			
